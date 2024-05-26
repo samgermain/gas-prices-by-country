@@ -1,0 +1,1 @@
+awk -F, 'FNR==NR{a[$1]=$2;next} $1 in a{$3=a[$1]} {print}' OFS=, gas-prices.csv iso-alpha-codes.csv
